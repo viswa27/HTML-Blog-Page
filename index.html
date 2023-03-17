@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./bball.png" type="image/x-icon">
     <title>Backtracking</title>
 </head>
 <body>
@@ -239,9 +240,9 @@
         Let's apply each of these two methods to the problem of coloring a checkerboard. This should be easily solvable; after all, a
         checkerboard only needs two colors.<br><br>
         <br><b>boolean maplsOK()</b><br>
-        Used by method 1 to check (at a leaf node) whether the entire map is colored correctly.
-        <br><b>boolean okToColor(int row, int column, int color)</b><br>
-        Used by method 2 to check, at every node, whether there is an adjacent node already colored with the given color,<br>
+        Used by method 1 to check (at a leaf node) whether the entire map is colored correctly.<br><br>
+        <b>boolean okToColor(int row, int column, int color)</b><br>
+        Used by method 2 to check, at every node, whether there is an adjacent node already colored with the given color,<br><br>
         <strong>int[] nextRowAndColumn(int row, int column)</strong><br>
         Used by both methods to find the next "country" (actually, the row and column of the next square on the checkerboard).<br><br>
         Here's the code for method 1:<br><br>
@@ -417,7 +418,7 @@
             <p>I call the following puzzle "Cindy's puzzle" for historical reasons. You have some number n of black marbles and the same number
                 of white marbles, and you have a playing board which consists simply of a line of 2n+1 spaces to put the marbles in. Start with
                 the black marbles all at one end (say, the left), the white marbles all at the other end, and a free space in between.
-        <center><table border="1" cellspacing="0">
+        <center><table border="1" cellspacing="0" cellpadding="4">
         <tr bgcolor="#dddddd">
             <th><img src="./bball.png" alt="black"></th>
             <th><img src="./bball.png" alt="black"></th>
@@ -427,7 +428,7 @@
         </tr>
         </table></center><br>The goal is to reverse the positions of the marbles:
         <br><br>
-        <center><table border="1" cellspacing="0">
+        <center><table border="1" cellspacing="0" cellpadding="4">
         <tr bgcolor="#dddddd">
             <th><img src="./wball.png" alt="White"></th>
             <th><img src="./wball.png" alt="White"></th>
@@ -447,7 +448,7 @@
         <center><table>
         <tr>
             <td width="150px"><b>Starting position:</b></td>
-            <td><table border="1" cellspacing="0"><tr bgcolor="#dddddd"><th><img src="./bball.png" alt="black"></th>
+            <td><table border="1" cellspacing="0" cellpadding="4"><tr bgcolor="#dddddd"><th><img src="./bball.png" alt="black"></th>
             <th><img src="./bball.png" alt="black"></th>
             <th width="50px">    </th>
             <th><img src="./wball.png" alt="White"></th>
@@ -458,7 +459,7 @@
             <table>
             <tr>
                 <td width="150px"><b>Black moves ahead:</b></td>
-                <td><table border="1" cellspacing="0"><tr bgcolor="#dddddd"><th><img src="./bball.png" alt="black"></th>
+                <td><table border="1" cellspacing="0" cellpadding="4"><tr bgcolor="#dddddd"><th><img src="./bball.png" alt="black"></th>
                 <th width="50px">    </th>
                 <th><img src="./bball.png" alt="black"></th>
                 <th><img src="./wball.png" alt="White"></th>
@@ -469,7 +470,7 @@
                 <table>
                 <tr>
                     <td width="150px"><b>bite jumps:</b></td>
-                    <td><table border="1" cellspacing="0"><tr bgcolor="#dddddd"><th><img src="./bball.png" alt="black"></th>
+                    <td><table border="1" cellspacing="0" cellpadding="4"><tr bgcolor="#dddddd"><th><img src="./bball.png" alt="black"></th>
                     <th><img src="./wball.png" alt="White"></th>
                     <th><img src="./bball.png" alt="black"></th>
                     <th width="50px">    </th>
@@ -480,7 +481,7 @@
                     <table>
                     <tr>
                         <td width="150px"><b>Black moves ahead:</b></td>
-                        <td><table border="1" cellspacing="0"><tr bgcolor="#dddddd"><th><img src="./bball.png" alt="black"></th>
+                        <td><table border="1" cellspacing="0" cellpadding="4"><tr bgcolor="#dddddd"><th><img src="./bball.png" alt="black"></th>
                         <th><img src="./wball.png" alt="White"></th>
                         <th width="50px">    </th>
                         <th><img src="./bball.png" alt="black"></th>
@@ -491,7 +492,7 @@
                         <table >
                         <tr>
                             <td width="150px"><b>Black jumps:</b></td>
-                            <td><table border="1" cellspacing="0"><tr bgcolor="#dddddd"><th width="50px">    </th>
+                            <td><table border="1" cellspacing="0" cellpadding="4"><tr bgcolor="#dddddd"><th width="50px">    </th>
                             <th><img src="./wball.png" alt="White"></th>
                             <th><img src="./bball.png" alt="black"></th>
                             <th><img src="./bball.png" alt="black"></th>
@@ -502,7 +503,7 @@
                             <table>
                             <tr>
                                 <td width="150px"><b>White moves ahead:</b></td>
-                                <td><table border="1" cellspacing="0"><tr bgcolor="#dddddd"><th width="50px">    </th>
+                                <td><table border="1" cellspacing="0" cellpadding="4"><tr bgcolor="#dddddd"><th width="50px">    </th>
                                 <th><img src="./wball.png" alt="White"></th>
                                 <th><img src="./bball.png" alt="black"></th>
                                 <th><img src="./bball.png" alt="black"></th>
@@ -510,9 +511,9 @@
                             </td>    
                             </tr>
                         </table><br>
-                        <table>
+                        <table cellpadding="4">
                             <tr >
-                                <td width="150px"><b>Stuck!</b></td>
+                                <td width="145px"><b>Stuck!</b></td>
                                 <td width="50px"> </td>
                                 <td width="50px"> </td>
                                 <td width="50px"> </td>
@@ -542,9 +543,9 @@
                 particular marble, we can talk about moving the marble in a particular space. If a move is possible from a given space, then that
                 must be the only move possible from that space, because if the marble in that space has a move, it is unique. There is a slight
                 complication because not every space contains a marble, but at least the spaces (unlike the marbles) stay in one place.<br><br></p>
-                <p><strong>Now we have a simpler ordering of moves to use in our program. Just check, in order, the 2n+1 spaces of the board. For each
+                <p><font color="303030"><b>Now we have a simpler ordering of moves to use in our program. Just check, in order, the 2n+1 spaces of the board. For each
                     space, either zero or one moves is possible. With this understanding, we can write a boolean method board, (int[] board, int
-                    position) which determines whether a move is possible from the given position:</strong></p><br>
+                    position) which determines whether a move is possible from the given position:</b></font></p><br>
                     <ul>
                         <li>If the position is empty, no move is possible;</li><br>
                         <li>If the position contains a black marble, the method checks for a move or jump to the right;</li><br>
@@ -574,24 +575,24 @@
         }</font></pre><br>Along with canMove and makeMove, we are using methods puzzleSolved and printBoard with meanings that should be obvious.<br><br>
         Here is some output from the program:</p><br>
     
-    <ol type="1" start="16" reversed><strong><font color="blue">
-        <li><font color="black">WHITE WHITE WHITE _____ BLACK BLACK BLACK</font></li>
-        <li><font color="black">WHITE WHITE WHITE BLACK _____ BLACK BLACK</font></li>
-        <li><font color="black">WHITE WHITE _____ BLACK WHITE BLACK BLACK</font></li>
-        <li><font color="black">WHITE _____ WHITE BLACK WHITE BLACK BLACK</font></li>
-        <li><font color="black">WHITE BLACK WHITE _____ WHITE BLACK BLACK</font></li>
-        <li><font color="black">WHITE BLACK WHITE BLACK WHITE _____ BLACK</font></li>
-        <li><font color="black">WHITE BLACK WHITE BLACK WHITE BLACK _____</font></li>
-        <li><font color="black">WHITE BLACK WHITE BLACK _____ BLACK WHITE</font></li>
-        <li><font color="black">WHITE BLACK _____ BLACK WHITE BLACK WHITE</font></li>
-        <li><font color="black">_____ BLACK WHITE BLACK WHITE BLACK WHITE</font></li>
-        <li><font color="black">BLACK _____ WHITE BLACK WHITE BLACK WHITE</font></li>
-        <li><font color="black">BLACK BLACK WHITE _____ WHITE BLACK WHITE</font></li>
-        <li><font color="black">BLACK BLACK WHITE BLACK WHITE _____ WHITE</font></li>
-        <li><font color="black">BLACK BLACK WHITE BLACK _____ WHITE WHITE</font></li>
-        <li><font color="black">BLACK BLACK _____ BLACK WHITE WHITE WHITE</font></li>
-        <li><font color="black">BLACK BLACK BLACK _____ WHITE WHITE WHITE</font></li>
-    </font></strong>
+    <ol reversed><strong><font color="blue" face="Vijaya" size="4">
+        <li><font color="black" face="Candara" size="3">WHITE WHITE WHITE _____ BLACK BLACK BLACK</font></li>
+        <li><font color="black" face="Candara" size="3">WHITE WHITE WHITE BLACK _____ BLACK BLACK</font></li>
+        <li><font color="black" face="Candara" size="3">WHITE WHITE _____ BLACK WHITE BLACK BLACK</font></li>
+        <li><font color="black" face="Candara" size="3">WHITE _____ WHITE BLACK WHITE BLACK BLACK</font></li>
+        <li><font color="black" face="Candara" size="3">WHITE BLACK WHITE _____ WHITE BLACK BLACK</font></li>
+        <li><font color="black" face="Candara" size="3">WHITE BLACK WHITE BLACK WHITE _____ BLACK</font></li>
+        <li><font color="black" face="Candara" size="3">WHITE BLACK WHITE BLACK WHITE BLACK _____</font></li>
+        <li><font color="black" face="Candara" size="3">WHITE BLACK WHITE BLACK _____ BLACK WHITE</font></li>
+        <li><font color="black" face="Candara" size="3">WHITE BLACK _____ BLACK WHITE BLACK WHITE</font></li>
+        <li><font color="black" face="Candara" size="3">_____ BLACK WHITE BLACK WHITE BLACK WHITE</font></li>
+        <li><font color="black" face="Candara" size="3">BLACK _____ WHITE BLACK WHITE BLACK WHITE</font></li>
+        <li><font color="black" face="Candara" size="3">BLACK BLACK WHITE _____ WHITE BLACK WHITE</font></li>
+        <li><font color="black" face="Candara" size="3">BLACK BLACK WHITE BLACK WHITE _____ WHITE</font></li>
+        <li><font color="black" face="Candara" size="3">BLACK BLACK WHITE BLACK _____ WHITE WHITE</font></li>
+        <li><font color="black" face="Candara" size="3">BLACK BLACK _____ BLACK WHITE WHITE WHITE</font></li>
+        <li><font color="black" face="Candara" size="3">BLACK BLACK BLACK _____ WHITE WHITE WHITE</font></li>
+        </i></font></strong>
     </ol><br>
     <p>Notice that the solution is given in reverse order: BLACK starts out on the left and WHITE on the right, as in the last
         line. I've added line numbers to the actual output in order to emphasize this point. Backtracking always produces its
